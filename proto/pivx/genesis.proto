@@ -1,0 +1,14 @@
+syntax = "proto3";
+package alice.pivx.pivx;
+
+import "gogoproto/gogo.proto";
+import "pivx/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "github.com/alice/pivx/x/pivx/types";
+
+// GenesisState defines the pivx module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
